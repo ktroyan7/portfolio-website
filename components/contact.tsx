@@ -29,9 +29,27 @@ export default function Contact() {
     >
         <SectionHeading>Contact me</SectionHeading>
         <p className='text-gray-700 -mt-6'>Please contact me directly at <a className='underline' href='mailto:kevin.troyan@gmail.com'>kevin.troyan@gmail.com</a> or through this form.</p>
-        <form className='mt-10 flex flex-col'>
-            <input className='h-14 px-4 rounded-lg borderBlack' type='email' placeholder='your email' />
-            <textarea className='h-52 my-3 rounded-lg borderBlack p-4' placeholder='Your message' />
+        <form className='mt-10 flex flex-col'
+        action={async (FormData) => {
+            console.log(FormData.get("senderEmail"))
+            console.log(FormData.get("message"))
+        }}
+        
+        >
+            <input className='h-14 px-4 rounded-lg borderBlack'
+            name='senderEmail'
+            type='email'
+            placeholder='your email'
+            required={true}
+            maxLength={500}
+            />
+            <textarea
+            className='h-52 my-3 rounded-lg borderBlack p-4'
+            name='message'
+            placeholder='Your message'
+            required={true}
+            maxLength={500}
+            />
             <button type='submit' className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105'
             >Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1'/>
             </button>
