@@ -11,3 +11,7 @@ html {
     visibility: visible !important;
     opacity: 1 !important;
 } 
+
+.borderBlack {
+    @apply border border-black/10;
+}
