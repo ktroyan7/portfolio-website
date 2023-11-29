@@ -10,6 +10,7 @@ import { FaGithubSquare } from 'react-icons/fa'
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
+
 export default function Intro() {
     
     const { ref } = useSectionInView("Home", 0.5);
@@ -27,7 +28,7 @@ export default function Intro() {
                 animate={{opacity:1, scale: 1}}
                 transition={{type: "tween", duration: 0.2,}}
                 >
-                <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+                <Image src='/kevin_troyan.png'
                 alt="Kevin Troyan portrait" 
                 width="192"
                 height="192"
@@ -42,7 +43,7 @@ export default function Intro() {
                 animate={{opacity:1, scale: 1}}
                 transition={{type: "spring", stiffness: 125, delay: 0.1, duration: 0.7,}}
                 >  
-                    👋
+                    🌎
                 </motion.span>
             </div>
         </div>
@@ -50,11 +51,10 @@ export default function Intro() {
         initial={{opacity: 0, y: 100}}
         animate={{opacity:1, y: 0}}
         >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hello, I'm Kevin.</span> I'm a{" "}
+        <span className="font-bold">full-stack developer</span> and{" "}<span className="font-bold">product manager</span> with{" "}
+        <span className="font-bold">3 years</span> of experience. I enjoy
+        building <span className="italic"> productivity, health, and fitness products</span>.
         </motion.h1>
 
         <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
@@ -79,13 +79,13 @@ export default function Intro() {
             </a>
            
             <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
-            href="https://linkedin.com" target="_blank"
+            href="https://www.linkedin.com/in/kevinmtroyan/" target="_blank"
             >
                 <BsLinkedin />
             </a>
            
             <a className='bg-white p-4 text-gray-700 flex items-center gap-2  text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
-            href="https://github.com" target="_blank"
+            href="https://github.com/ktroyan7" target="_blank"
             >
                 <FaGithubSquare />
             </a>
